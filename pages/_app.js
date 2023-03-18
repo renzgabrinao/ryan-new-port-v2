@@ -1,7 +1,7 @@
 import Layout from "@/components/layout";
 import Navbar from "@/components/Navbar";
 import "@/styles/globals.css";
-import localFont from "@next/font/local";
+import localFont from "next/font/local";
 
 const melodrama = localFont({
   src: "../public/fonts/Melodrama-Variable.ttf",

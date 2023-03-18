@@ -40,8 +40,12 @@ module.exports = {
         primary: "#0e1216",
         blur: "#030303",
       },
+      fontFamily: {
+        melodrama: ["var(--font-melodrama)"],
+        satoshi: ["var(--font-satoshi)"],
+      },
       fontSize: {
-        heroName: "clamp(2.20rem, calc(-0.04rem + 11.20vw), 13.40rem)",
+        heroName: "clamp(3.42rem, calc(1.24rem + 10.90vw), 14.32rem)",
         heroSub: "clamp(1.60rem, calc(0.68rem + 4.60vw), 6.20rem)",
         step6: "clamp(0.70rem, calc(0.56rem + 0.71vw), 1.42rem)",
         step5: "clamp(0.84rem, calc(0.66rem + 0.93vw), 1.77rem)",

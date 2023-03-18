@@ -10,7 +10,7 @@ export default {
     },
     {
       title: 'Link',
-      name: 'Link',
+      name: 'link',
       type: 'string',
     },
   ],

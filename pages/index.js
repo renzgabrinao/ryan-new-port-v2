@@ -1,8 +1,10 @@
 import Hero from "@/components/Hero";
+import { client } from "@/utils/client";
+import { siteSettingsQuery } from "@/utils/queries";
 import Head from "next/head";
 import Image from "next/image";
 
-export default function Home() {
+export default function Home({ settings }) {
   return (
     <>
       <Head>
@@ -11,9 +13,23 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main className="h-screen w-full">
-        <section className="h-screen bg-black w-full"></section>
+      <main className="w-full h-screen">
+        <section className="w-full h-screen">
+          <h1 className="py-3 font-bold text-center text-white text-9xl font-melodrama text-heroName">
+            {settings.title}
+          </h1>
+        </section>
       </main>
     </>
   );
+}
+
+export async function getStaticProps() {
+  const settings = await client.fetch(siteSettingsQuery());
+
+  return {
+    props: {
+      settings,
+    },
+  };
 }

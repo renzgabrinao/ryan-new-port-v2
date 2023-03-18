@@ -27,7 +27,7 @@ module.exports = {
     },
     extend: {
       colors: {
-        "main-bg": "#0e1216",
+        primary: "#0e1216",
         "rg-white": "#f1ede9",
         "rg-orange": "#FF884B",
       },
@@ -36,6 +36,10 @@ module.exports = {
       //   gambetta: ["Gambetta"],
       //   migra: ["Migra"],
       // },
+      backgroundColor: {
+        primary: "#0e1216",
+        blur: "#030303",
+      },
       fontSize: {
         heroName: "clamp(2.20rem, calc(-0.04rem + 11.20vw), 13.40rem)",
         heroSub: "clamp(1.60rem, calc(0.68rem + 4.60vw), 6.20rem)",

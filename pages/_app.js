@@ -14,11 +14,36 @@ const satoshi = localFont({
   ],
   variable: "--font-satoshi",
 });
+const neueHaas = localFont({
+  src: [
+    {
+      path: "../public/fonts/NeueHaasDisplayBlack.ttf",
+      style: "normal",
+      weight: "900",
+    },
+    {
+      path: "../public/fonts/NeueHaasDisplayBlackItalic.ttf",
+      style: "italic",
+      weight: "900",
+    },
+    {
+      path: "../public/fonts/NeueHaasDisplayMedium.ttf",
+      style: "normal",
+      weight: "400",
+    },
+    {
+      path: "../public/fonts/NeueHaasDisplayMediumItalic.ttf",
+      style: "italic",
+      weight: "400",
+    },
+  ],
+  variable: "--font-neuehaas",
+});
 
 export default function App({ Component, pageProps }) {
   return (
     <div
-      className={`bg-primary ${melodrama.variable} ${satoshi.variable} w- h-screen overflow-hidden px-4`}
+      className={`bg-primary ${melodrama.variable} ${satoshi.variable} ${neueHaas.variable}`}
     >
       <Layout>
         <Component {...pageProps} />

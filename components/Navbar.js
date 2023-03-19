@@ -3,11 +3,11 @@ import React from "react";
 
 const Navbar = () => {
   return (
-    <div className="relative z-50 flex justify-between w-full py-3 font-normal border-b-2 text-rg-white font-satoshi text-step1">
+    <nav className="absolute left-0 z-50 flex justify-between w-full px-4 py-3 font-normal tracking-tighter bottom-10 text-rg-white font-satoshi text-step1 md:top-0">
       <Link href="/">Home</Link>
       <Link href="/">Works</Link>
       <Link href="/">About</Link>
-    </div>
+    </nav>
   );
 };
 

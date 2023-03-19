@@ -43,6 +43,7 @@ module.exports = {
       fontFamily: {
         melodrama: ["var(--font-melodrama)"],
         satoshi: ["var(--font-satoshi)"],
+        neuehaas: ["var(--font-neuehaas)"],
       },
       fontSize: {
         heroName: "clamp(3.42rem, calc(1.24rem + 10.90vw), 14.32rem)",

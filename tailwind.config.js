@@ -28,6 +28,7 @@ module.exports = {
     extend: {
       colors: {
         primary: "#0e1216",
+        card: "#170F2E",
         "rg-white": "#f1ede9",
         "rg-orange": "#FF884B",
       },

@@ -4,9 +4,10 @@ import urlFor from "@/utils/imageBuilder";
 import { siteSettingsQuery } from "@/utils/queries";
 import Head from "next/head";
 import Image from "next/image";
+import { motion as m } from "framer-motion";
+import { customEase3 } from "@/utils/eases";
 
 export default function Home({ settings }) {
-  console.log(settings);
   return (
     <>
       <Head>
@@ -15,7 +16,11 @@ export default function Home({ settings }) {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main className="w-full h-screen overflow-hidden select-none">
+      <m.main
+        className="top-0 left-0 w-full h-screen overflow-hidden select-none bg-primary"
+        exit={{ x: "-100%", position: "absolute", zIndex: 5 }}
+        transition={{ duration: 0.9, ease: customEase3 }}
+      >
         <section className="w-full">
           <div className="absolute top-14 md:top-[unset] md:bottom-12 md:left-4 md:w-fit text-center md:text-left z-10 leading-[1] text-rg-white uppercase w-full">
             <h1
@@ -28,7 +33,7 @@ export default function Home({ settings }) {
               <span className="font-melodrama">Creative</span> Developer
             </h2>
           </div>
-          <div className="absolute w-full overflow-hidden -translate-x-1/2 -translate-y-1/2 md:w-3/5 lg:w-1/3 aspect-square top-1/2 left-1/2 blur-md">
+          <div className="absolute w-full overflow-hidden -translate-x-1/2 -translate-y-1/2 md:w-3/5 lg:w-[40%] aspect-square top-1/2 left-1/2 blur-xl">
             <Image
               src={"/../public/images/heroGif.gif"}
               fill
@@ -36,7 +41,7 @@ export default function Home({ settings }) {
               draggable={false}
             />
           </div>
-          <div className="absolute z-50 -translate-x-1/2 -translate-y-1/2 h-1/5 aspect-square top-1/2 left-1/2 opacity-90 blur-0">
+          <div className="absolute z-50 -translate-x-1/2 -translate-y-1/2 h-1/5 aspect-square top-1/2 left-1/2 opacity-80 blur-0">
             <Image
               src={urlFor(settings.heroImage).url()}
               fill
@@ -45,7 +50,7 @@ export default function Home({ settings }) {
             />
           </div>
         </section>
-      </main>
+      </m.main>
     </>
   );
 }

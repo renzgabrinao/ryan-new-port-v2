@@ -1,11 +1,11 @@
+import FontProvider from "./FontProvider";
 import Navbar from "./Navbar";
 
 export default function Layout({ children }) {
   return (
-    <>
+    <FontProvider>
       <Navbar />
-      <div>{children}</div>
-      {/* <Footer /> */}
-    </>
+      {children}
+    </FontProvider>
   );
 }
